@@ -3,6 +3,7 @@
     Type-annotated function floor
 """
 
+
 def floor(n: float) -> int:
     """
         Returns floor of float passed to it
