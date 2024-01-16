@@ -14,9 +14,6 @@ async def task_wait_n(n: int, max_delay: int) -> List[float]:
     Executive wait_random n times with specified max_delay
     returns: list of all delays.
     """
-    if not isinstance(n, int) or not isinstance(max_delay, int):
-        raise TypeError('Expected integer values to be passed')
-    
     futrs = [task_wait_random(max_delay) for _ in range(n)]
     futrs = asyncio.as_completed(futrs)
     delys = [await future for future in futrs]
