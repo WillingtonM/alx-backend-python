@@ -2,7 +2,6 @@
 """
 Module that compute average excetion time for running subroutine
 """
-
 from asyncio import run
 from time import time
 
